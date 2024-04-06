@@ -19,6 +19,6 @@ data "aws_ami" "amazon-linux-2" {
 }
 
 resource "aws_instance" "ductt-ec2" {
-  ami           = data.amazon-linux-2.id
+  ami           = data.aws_ami.amazon-linux-2.id
   instance_type = var.instance_type
 }
